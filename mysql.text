@@ -1,0 +1,1 @@
+INSERT INTO message (id,whenAdded,comment,deleted) VALUES (NULL,'2018-07-26 07:01:30', 'hello test hello lorem ipsem amut livi', FALSE);
