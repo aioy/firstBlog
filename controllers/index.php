@@ -1,5 +1,5 @@
 <?php
 
-$tasks = $app['database']->selectAll('message');
+$posts = $app['database']->selectAll('message');
 
 require 'views/index.view.php';

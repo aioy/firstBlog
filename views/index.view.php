@@ -18,26 +18,23 @@
         <nav>
             
             <ul>
-                <li><a href='/about.php'>about</a></li>
-                <li><a href='/contact.php'>contact</a></li>
+                <li><a href='/about'>about</a></li>
+                
+                <li><a href='/contact'>contact</a></li>
                 
             </ul>
 
         </nav>
 
-        <ul>
+        <h3>Submit Post</h3>
 
-            <?php foreach($posts as $post): ?>
+        <form method='POST' action='/posts'>
+            
+            <input name = 'post'></input>
 
-                <li>
+            <button type='submit'>Submit</button>
 
-                    <?php echo $post->comment; ?>
-
-                </li>
-
-            <?php endforeach; ?>
-    
-        </ul>
+        </form>
 
     </body>
 
