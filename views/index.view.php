@@ -26,11 +26,16 @@
 
         </nav>
 
-        <h3>Submit Post</h3>
 
-        <form method='POST' action='/posts'>
+        <?php foreach ($users as $user) : ?>
+            <li><?= $user->name; ?></li>
+        <?php endforeach; ?>
+
+        <h3>Submit Username</h3>
+
+        <form method='POST' action='/names'>
             
-            <input name = 'post'></input>
+            <input name = 'posts'></input>
 
             <button type='submit'>Submit</button>
 

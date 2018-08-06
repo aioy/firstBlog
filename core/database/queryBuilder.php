@@ -1,6 +1,6 @@
 <?php
 
-class queryBuilder {
+class QueryBuilder {
 
     protected $pdo;
 
@@ -23,23 +23,16 @@ class queryBuilder {
     public function insert($table, $parameters){
 
         $sql = sprintf(
-            
-            'insert into %s (%s) values ($s)',
-           
+            'insert into %s (%s) values (%s)',
             $table,
-
             implode(', ', array_keys($parameters)),
-
             ':' . implode(', :', array_keys($parameters))
-
         );
 
         try {
+            $statement = $this->pdo->prepare($sql);
 
-            $statement = $this->pdo-prepare($sql);
-
-            $statement->execute();
-
+            $statement->execute($parameters);
         }   catch (Exception $e) {
 
             die('something went wrong');
@@ -47,6 +40,5 @@ class queryBuilder {
         }
 
     }
-
 }
 

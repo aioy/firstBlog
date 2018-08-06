@@ -1,5 +1,5 @@
 <?php
 
-$posts = $app['database']->selectAll('message');
+$users = $app['database']->selectAll('users');
 
 require 'views/index.view.php';

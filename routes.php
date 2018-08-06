@@ -6,5 +6,5 @@ $router->get('about', 'controllers/about.php');
 
 $router->get('contact', 'controllers/contact.php');
 
-$router->post('posts', 'controllers/add-post.php');
+$router->post('names', 'controllers/add-name.php');
 
