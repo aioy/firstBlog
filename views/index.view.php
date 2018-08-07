@@ -33,9 +33,11 @@
 
         <h3>Submit Username</h3>
 
-        <form method='POST' action='/names'>
+        <form method='POST' action='/users'>
             
-            <input name = 'posts'></input>
+            Username<input name = 'username'></input>
+
+            Password<input name = 'password'></input>
 
             <button type='submit'>Submit</button>
 
