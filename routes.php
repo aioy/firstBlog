@@ -8,3 +8,5 @@ $router->get('contact', 'controllers/contact.php');
 
 $router->post('users', 'controllers/add-user.php');
 
+$router->post('login', 'controllers/login.php');
+

@@ -12,7 +12,7 @@ class QueryBuilder {
 
     public function selectAll($table) {
 
-        $statement = $this->pdo->prepare("select * from {$table}");
+        $statement = $this->pdo->prepare("SELECT * FROM {$table}");
   
         $statement->execute();
       
@@ -39,6 +39,17 @@ class QueryBuilder {
 
         }
 
+    }
+
+    public function login($username, $password){
+
+        $statement = $this->pdo->prepare("SELECT * FROM users WHERE name = :name");
+
+        $statement->execute(array('name' => $username));
+
+        foreach($statement as $row){
+            var_dump($row);
+        }
     }
 }
 

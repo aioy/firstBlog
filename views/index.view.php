@@ -35,13 +35,23 @@
 
         <form method='POST' action='/users'>
             
-            Username<input name = 'username'></input>
+            Username<input type='text' name='username' required>
 
-            Password<input name = 'password'></input>
+            Password<input type='password' name='password' required>
 
             <button type='submit'>Submit</button>
 
         </form>
+
+        <form method='POST' action='/login'>
+            
+            <label for='username'>Username :</label>
+            <input type='text' name='username' required>
+
+            <label for='password'>Password :</label>
+            <input type='password' name='password' required>
+
+            <input type='submit' name='submit'>
 
     </body>
 
