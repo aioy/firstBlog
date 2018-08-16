@@ -33,7 +33,7 @@
 
         <h3>Submit Username</h3>
 
-        <form method='POST' action='/users'>
+        <form method='POST' action='/users' id='register'>
             
             Username<input type='text' name='username' required>
 
@@ -53,6 +53,7 @@
 
             <input type='submit' name='submit'>
 
+        <script src='registerFail.js'></script>
     </body>
 
 </html>

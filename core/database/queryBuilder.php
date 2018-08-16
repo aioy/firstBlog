@@ -75,6 +75,32 @@ class QueryBuilder {
             echo $e->getMessage();
         }
     }
+
+    public function nameTaken($username){
+
+        $statement = $this->pdo->prepare('SELECT count(*) FROM users WHERE name = :name');
+
+        $statement->execute(array('name' => $username));
+
+        $res = $statement->fetch(PDO::FETCH_NUM);
+
+        $exists = array_pop($res);
+
+        if ($exists > 0) {
+
+            $json = array(
+                'success' => false
+            );
+
+            echo json_encode($json);
+
+            return true;
+        
+        } else {
+            //the name can be made
+            return false;
+        }
+    }
     
 }
 
