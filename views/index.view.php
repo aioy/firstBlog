@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 
 <html lang='en-US'>
@@ -36,6 +36,9 @@
         <form method='POST' action='/users' id='register'>
             
             Username<input type='text' name='username' required>
+            <?php if (array_key_exists("error", $_SESSION)){
+    echo $_SESSION["error"];
+}           ?>
 
             Password<input type='password' name='password' required>
 
@@ -47,13 +50,13 @@
             
             <label for='username'>Username :</label>
             <input type='text' name='username' required>
-
+ 
             <label for='password'>Password :</label>
             <input type='password' name='password' required>
 
             <input type='submit' name='submit'>
 
-        <script src='registerFail.js'></script>
+        <!-- <script src='registerFail.js'></script> -->
     </body>
 
 </html>

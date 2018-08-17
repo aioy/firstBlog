@@ -87,17 +87,11 @@ class QueryBuilder {
         $exists = array_pop($res);
 
         if ($exists > 0) {
-
-            $json = array(
-                'success' => false
-            );
-
-            echo json_encode($json);
-
+            
             return true;
         
         } else {
-            //the name can be made
+            //name can be made
             return false;
         }
     }
