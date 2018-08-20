@@ -8,10 +8,6 @@ $loginError = $_SESSION['loginError'];
 
 $error = $_SESSION['error'];
 
-$username = $_SESSION['username'];
-
-unset($_SESSION['username']);
-
 unset($_SESSION['loginError']);
 
 unset($_SESSION["error"]);

@@ -62,6 +62,7 @@ class QueryBuilder {
 
                     $_SESSION['username'] = $row[name];
                 
+                    header("location:/welcome");
                     
                     return true;
             
@@ -69,8 +70,12 @@ class QueryBuilder {
 
                     session_start();
 
+                    echo 'failed';
+                    
                     $_SESSION['loginError'] = 'username or password is incorrect';
-                
+    
+                    header("location:/");
+
                     return false;
                 }
             }
