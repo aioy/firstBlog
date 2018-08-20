@@ -58,15 +58,18 @@ class QueryBuilder {
                 //succesful login
                 if (password_verify($password,$row[password])){
                     
-                    $_SESSION['users'] = $row[name];
+                    session_start();
+
+                    $_SESSION['username'] = $row[name];
                 
-                    echo 'true';
                     
                     return true;
             
                 } else {
-                    
-                    echo 'false';
+
+                    session_start();
+
+                    $_SESSION['loginError'] = 'username or password is incorrect';
                 
                     return false;
                 }
