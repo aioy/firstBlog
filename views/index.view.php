@@ -30,35 +30,50 @@
             <li><?= $user->name; ?></li>
         <?php endforeach; ?>
 
-        <h3>Submit Username</h3>
+        <?php if(!isset($_SESSION['username'])) : ?> 
 
-        <form method='POST' action='/users' id='register'>
+            <h3>Submit Username</h3>
+
+            <form method='POST' action='/users' id='register'>
+                
+                Username<input type='text' name='username' required>
+                <?php if (isset($error)){
+                echo $error; }?>
+
+                Password<input type='password' name='password' required>
+
+                <button type='submit'>Submit</button>
+
+            </form>
+
+            <form method='POST' action='/login'>
+                
+                <label for='username'>Username :</label>
+                <input type='text' name='username' required>
+    
+                <label for='password'>Password :</label>
+                <input type='password' name='password' required>
+
+                <?php if (isset($loginError)){
+                echo $loginError; }?>
+
+
+                <button type='submit'>Submit</button>
             
-            Username<input type='text' name='username' required>
-            <?php if (isset($error)){
-            echo $error; }?>
+            </form>
 
-            Password<input type='password' name='password' required>
-
-            <button type='submit'>Submit</button>
-
-        </form>
-
-        <form method='POST' action='/login'>
-            
-            <label for='username'>Username :</label>
-            <input type='text' name='username' required>
- 
-            <label for='password'>Password :</label>
-            <input type='password' name='password' required>
-
-             <?php if (isset($loginError)){
-            echo $loginError; }?>
+        <?php endif; ?>
+                    
+        <?php if(isset($_SESSION['username'])) : ?> 
+            <a href="logout">Logout</a>
+        <?php endif; ?>
 
 
-            <button type='submit'>Submit</button>
+        <?php if(isset($_SESSION['username'])) : ?> 
+          
+          <h1> Welcome <?php echo $_SESSION['username']; ?> </h1>
         
-        </form>
+        <?php endif; ?>
 
         <!-- <script src='registerFail.js'></script> -->
     </body>

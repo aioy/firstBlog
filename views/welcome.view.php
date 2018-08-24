@@ -14,7 +14,11 @@
 
     <body>
 
-    <h1> Welcome <?php echo $user ?> </h1>
+    <?php if(isset($_SESSION['username'])) : ?> 
+          
+        <h1> Welcome <?php echo $_SESSION['username']; ?> </h1>
+        
+    <?php endif; ?>
 
     </body>
 

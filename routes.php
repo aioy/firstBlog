@@ -14,3 +14,5 @@ $router->post('login', 'controllers/login.php');
 
 $router->get('welcome', 'controllers/welcome.php');
 
+$router->get('logout', 'controllers/logout.php');
+

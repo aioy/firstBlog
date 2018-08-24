@@ -62,7 +62,7 @@ class QueryBuilder {
 
                     $_SESSION['username'] = $row[name];
                 
-                    header("location:/welcome");
+                    header("location:/");
                     
                     return true;
             
