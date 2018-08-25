@@ -18,6 +18,16 @@
           
         <h1> Welcome <?php echo $_SESSION['username']; ?> </h1>
         
+        <form action='picture.php' method='POST' enctype='multipart/form-data'>
+           
+            <label>description:</label><input type='text' name='desc'>
+           
+            <label>Image:</label><input type='file' name='img'>
+            
+            <button type='submit'>Submit</button>
+
+        </form>
+    
     <?php endif; ?>
 
     </body>
