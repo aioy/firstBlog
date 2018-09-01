@@ -16,3 +16,5 @@ $router->get('welcome', 'controllers/welcome.php');
 
 $router->get('logout', 'controllers/logout.php');
 
+$router->post('picture', 'controllers/picture.php');
+

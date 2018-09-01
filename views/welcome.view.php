@@ -18,7 +18,7 @@
           
         <h1> Welcome <?php echo $_SESSION['username']; ?> </h1>
         
-        <form action='picture.php' method='POST' enctype='multipart/form-data'>
+        <form action='/picture' method='POST' enctype='multipart/form-data'>
            
             <label>description:</label><input type='text' name='desc'>
            
