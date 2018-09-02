@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $flag = TRUE;
 
@@ -56,6 +57,23 @@ if(isset($_FILES['img'])) {
 
         }
 
+    }
+
+    //store in database
+    if($flag == TRUE){
+        $app['database']->insert('image', [
+
+            'user' => $_SESSION['username'],
+        
+            'description' => $_POST['desc'],
+
+            'image' => $newFileName
+        
+        ]);
+
+        echo 'moved to database';
+    } else {
+        echo 'failed to store in db';
     }
 }
 

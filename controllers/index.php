@@ -2,6 +2,8 @@
 
 $users = $app['database']->selectAll('users');
 
+$images = $app['database']->selectAll('image');
+
 session_start();
 
 $loginError = $_SESSION['loginError'];
