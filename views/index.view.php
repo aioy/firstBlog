@@ -10,6 +10,9 @@
 
         <meta name='viewport' content='width=device-width, intial-scale=1'>
     
+        <!-- Bootstrap -->
+        <link href='styles/bootstrap.min.css' rel='stylesheet'>
+
     </head>
 
     <body>
@@ -19,7 +22,7 @@
             <ul>
                 <li><a href='/about'>about</a></li>
                 
-                <li><a href='/contact'>contact</a></li>
+                <li class ='text-primary'><a href='/contact'>contact</a></li>
                 
             </ul>
 
