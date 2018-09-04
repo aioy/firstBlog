@@ -11,27 +11,39 @@
         <meta name='viewport' content='width=device-width, intial-scale=1'>
     
         <!-- Bootstrap -->
-        <link href='styles/bootstrap.min.css' rel='stylesheet'>
+        <!-- <link href='styles/bootstrap.min.css' rel='stylesheet'> -->
+
+        <!-- main css -->
+        <link href='styles/main.css' rel='stylesheet'>
+
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
     </head>
 
     <body>
 
-        <nav>
+        <nav class='main-nav'>
+
+        <?php if(!isset($_SESSION['username'])) : ?> 
             
-            <ul>
-                <li><a href='/about'>about</a></li>
+            <ul class="nav-obj">
+                <li class="nav-link">
+                    <a class="" href='/loginForm'>Login</a>
+                </li>
                 
-                <li class ='text-primary'><a href='/contact'>contact</a></li>
+                <li class ='nav-link'>
+                    <a class="" href='/register'>Register</a>
+                </li>
                 
             </ul>
+        <?php endif; ?>
+
+        <?php if(isset($_SESSION['username'])) : ?> 
+            <a href="logout">Logout</a>
+        <?php endif; ?>
 
         </nav>
-
-
-        <?php foreach ($users as $user) : ?>
-            <li><?= $user->name; ?></li>
-        <?php endforeach; ?>
 
         <?php if(!isset($_SESSION['username'])) : ?> 
 
@@ -65,10 +77,6 @@
             
             </form>
 
-        <?php endif; ?>
-                    
-        <?php if(isset($_SESSION['username'])) : ?> 
-            <a href="logout">Logout</a>
         <?php endif; ?>
 
         <?php if(isset($_SESSION['username'])) : ?> 

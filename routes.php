@@ -4,9 +4,9 @@ $router->get('', 'controllers/index.php');
 
 $router->get('message', 'controllers/message.php');
 
-$router->get('about', 'controllers/about.php');
+$router->get('loginForm', 'controllers/loginForm.php');
 
-$router->get('contact', 'controllers/contact.php');
+$router->get('register', 'controllers/register.php');
 
 $router->post('users', 'controllers/add-user.php');
 
