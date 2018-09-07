@@ -107,48 +107,52 @@ table {
 
     display: inline-grid;
 
-    grid-template-columns: auto;
-  
-    grid-template-rows: auto auto auto;
-
     border: solid 2px gray;
 
     margin: 5px 10px;
 
-    grid-template-areas:
-    'top top top'
-    'name name name'
-    'comment comment .';
+    text-align: center;
 
 }
 
-.post > img {
-
-    max-height: 19em;
+.post2 {
 
     max-width: 19em;
 
-    grid-area:top;
+    display:inline-block;
 }
 
-.post > h3 {
+.post2 > img {
 
-    grid-area: name;
+    max-height: 19em;
+
+    min-width:100%;
+
+    max-width: 100%;
+
+    cursor: pointer; 
+
+}
+
+.post2 > h3 {
 
     padding-left : 5px;
 
     padding-top : 5px;
 
+    font-weight: bold;
+
     color: #00ff00;
 
 }
 
-.post > p {
+.post2 > p {
 
-    grid-area: comment;
 
     padding: 4px 4px 6px 6px;
 
     white-space: initial;
+
+    word-wrap: break-word;
 
 }
