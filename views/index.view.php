@@ -96,8 +96,10 @@
         <?php endif; ?>
 
          <?php foreach ($images as $image) : ?>
-            <div>
+            <div class='post'>
                 <img src='uploadedFiles/<?php echo $image->image; ?>' alt='$image->id'>
+                <h3><?php echo $image->user; ?></h3>
+                <p>"<?php echo $image->description; ?>"</p>
             </div> 
         <?php endforeach; ?>
                     
