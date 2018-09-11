@@ -22,7 +22,15 @@
 
     </head>
 
-    <body>
+    <body id="LoginForm">
+<div class="container">
+<h1 class="form-heading">login Form</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Admin Login</h2>
+   <p>Please enter your email and password</p>
+   </div>
     <form id="Login">
 
         <div class="form-group">
@@ -43,6 +51,11 @@
         <button type="submit" class="btn btn-primary">Login</button>
 
     </form>
-    </body>
+    </div>
+<p class="botto-text"> Designed by Sunil Rajput</p>
+</div></div></div>
+
+
+</body>
 
 </html>

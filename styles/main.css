@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: 'Titillium Web', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -32,6 +33,7 @@ body {
     line-height: 1;
     background-color: #0c0001;
     color: #F73F94;
+    background-image: linear-gradient(to right, #0c0001 , #6A5A58);
 }
 ol, ul {
 	list-style: none;
@@ -91,7 +93,6 @@ table {
 
 .nav-link > a {
 
-    font-family: 'Titillium Web', sans-serif;
 
     text-decoration:none;
     
@@ -155,4 +156,81 @@ table {
 
     word-wrap: break-word;
 
+}
+
+/* forms */
+
+.centered {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:100vh;
+}
+
+.form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color:#282a2e;
+
+    box-shadow: 10px 10px pink;
+
+    padding: 5rem;
+
+    text-align:center;
+
+}
+
+.form label {
+
+    margin-bottom: 2em;
+
+    font-weight:800;
+
+    font-size: 2rem;
+
+    text-shadow: 0 3px black;
+}
+
+.form input {
+
+    color: #000;
+
+    width: 18.7rem;
+
+    height: 3.4rem;
+
+    padding: 10px;
+
+    margin-bottom: 0;
+
+    border: 0;
+    
+    font-size: 1em;
+
+    -webkit-appearance: none;
+    
+}
+
+.form input:nth-of-type(2){
+    border-top: 1px solid #c0cdd1;
+}
+
+.form input, select, textarea{
+    color: #E75CD4;
+}
+
+.form textarea:focus, input:focus {
+    color: #E75CD4;
+}
+
+.form button {
+
+    margin-top: 1rem;
 }
