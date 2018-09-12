@@ -104,6 +104,15 @@ table {
 
 /* posts */
 
+.imageContainer{
+
+    margin: 0 auto;
+    
+    width: 95%;
+
+    margin-top: 10px;
+}
+
 .post {
 
     display: inline-grid;
@@ -233,4 +242,38 @@ table {
 .form button {
 
     margin-top: 1rem;
+
+    background-color: #c0cdd1;
+    
+    border:none;
+
+    box-shadow: 0 0 3px #ccc;
+
+}
+
+.form button span {
+
+    font-weight: 860;
+
+    color: #296E26;
+
+    font-size: 1rem;
+
+    text-shadow: 0 1px black;
+
+}
+
+.form p {
+
+    margin-top: 10%;
+}
+
+.form p a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    font-weight: bold;
+
 }

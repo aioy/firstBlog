@@ -30,13 +30,23 @@
                 <label>Register</label>
 
                 <input type='text' name='username' placeholder='Username' required>
-                <?php if (isset($error)){
-                        echo $error;
-                     }?>
-                     
+                <!-- username is taken error message -->
+                <?php if (isset($error)) : ?>
+                        <h2><?php echo $error ?></h2>
+                <?php endif; ?>
+
+
+                <?php if (isset($loginError)){
+                echo $loginError; }?>
+
+   
                 <input type='password' name='password' placeholder='Password' required>
 
-                <button type='submit'>Register</button>
+                <button type='submit'>
+                    <span>Register</span>
+                </button>
+
+                <p>or <a href='/loginForm'>login</a></p>
 
             </form>
         

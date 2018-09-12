@@ -74,7 +74,7 @@ class QueryBuilder {
                     
                     $_SESSION['loginError'] = 'username or password is incorrect';
     
-                    header("location:/");
+                    header("location:/loginForm");
 
                     return false;
                 }

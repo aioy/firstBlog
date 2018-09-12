@@ -13,8 +13,11 @@ if(!$app['database']->nameTaken($_POST['username'])){
         'password' => $hash
     
     ]);
+
+    header("location:/");
 } else {
     $_SESSION['error'] = 'Username is taken';
+
+    header("location:/register");
 }
 
-header("location:/");
