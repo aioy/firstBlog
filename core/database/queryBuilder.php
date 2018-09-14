@@ -57,8 +57,6 @@ class QueryBuilder {
             foreach ($statement as $row){
                 //succesful login
                 if (password_verify($password,$row[password])){
-                    
-                    session_start();
 
                     $_SESSION['username'] = $row[name];
                 
@@ -68,10 +66,6 @@ class QueryBuilder {
             
                 } else {
 
-                    session_start();
-
-                    echo 'failed';
-                    
                     $_SESSION['loginError'] = 'username or password is incorrect';
     
                     header("location:/loginForm");

@@ -51,7 +51,7 @@
           
           <form action='/picture' method='POST' enctype='multipart/form-data'>
              
-              <label>description:</label><input type='text' name='desc'>
+              <label>description:</label><textarea rows='5' cols='35' name='desc'></textarea>
              
               <label>Image:</label><input type='file' name='img'>
               
