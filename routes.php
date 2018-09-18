@@ -14,5 +14,9 @@ $router->post('login', 'controllers/login.php');
 
 $router->get('logout', 'controllers/logout.php');
 
+$router->post('delete', 'controllers/delete.php');
+
 $router->post('picture', 'controllers/picture.php');
+
+$router->post('update', 'controllers/update.php');
 

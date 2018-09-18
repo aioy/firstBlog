@@ -40,7 +40,7 @@
         <?php endif; ?>
 
         <?php if(isset($_SESSION['username'])) : ?> 
-            <a href="logout">Logout</a>
+            <a id='logout' href="logout">Logout</a>
         <?php endif; ?>
 
         </nav>
@@ -68,6 +68,18 @@
                         <img src='uploadedFiles/<?php echo $image->image; ?>' alt='$image->id'>
                         <h3><?php echo $image->user; ?></h3>
                         <p>"<?php echo $image->description; ?>"</p>
+                        <?php if(isset($_SESSION['username']) && $_SESSION['username'] == $image->user) : ?> 
+                            <form action='/delete' method='POST'>
+                                <input type='hidden' name='deletePost' value='<?php echo $image->id; ?>'>
+                                <input type='hidden' name='image' value='uploadedFiles/<?php echo $image->image ?>'>
+                                <input type="submit" value="Delete">
+                            </form>
+                            <form action='/update' method='POST'>
+                                <input type='hidden' name='updateId' value='<?php echo $image->id; ?>'>
+                                <input type='text' name='newDesc'>
+                                <input type="submit" value="Edit">
+                            </form>
+                        <?php endif; ?>
                     </div>
                 </div> 
             <?php endforeach; ?>

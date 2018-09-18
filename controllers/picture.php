@@ -72,8 +72,12 @@ if(isset($_FILES['img'])) {
         ]);
 
         echo 'moved to database';
+
+        header("location:/");
     } else {
         echo 'failed to store in db';
+
+        header("location:/");
     }
 }
 

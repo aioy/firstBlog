@@ -15,3 +15,4 @@ unset($_SESSION['loginError']);
 unset($_SESSION["error"]);
 
 require 'views/index.view.php';
+

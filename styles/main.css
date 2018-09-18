@@ -102,6 +102,16 @@ table {
 
 }
 
+#logout {
+
+    text-decoration:none;
+    
+    color:pink;
+
+    font-weight: 900;
+
+}
+
 /* posts */
 
 .imageContainer{

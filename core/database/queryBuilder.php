@@ -97,6 +97,34 @@ class QueryBuilder {
             return false;
         }
     }
+
+    public function delete($id){
+
+        $statement = $this->pdo->prepare('DELETE FROM image WHERE id = :id');
+
+        $statement->execute(array('id' => $id));
+
+    }
+
+    public function update($id, $desc){
+
+        try {
+
+            $sql = "UPDATE image SET description='$desc' WHERE id='$id'";
+
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute();
+
+            }
+
+        catch(PDOException $e){
+
+            echo $sql . "<br>" . $e->getMessage();
+            
+        }
+            
+    }
     
 }
 
