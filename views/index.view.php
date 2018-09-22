@@ -46,19 +46,23 @@
         </nav>
 
         <?php if(isset($_SESSION['username'])) : ?> 
-          
-          <h1> Welcome <?php echo $_SESSION['username']; ?> </h1>
-          
-          <form action='/picture' method='POST' enctype='multipart/form-data'>
-             
-              <label>description:</label><textarea rows='5' cols='35' name='desc'></textarea>
-             
-              <label>Image:</label><input type='file' name='img'>
-              
-              <button type='submit'>Submit</button>
-  
-          </form>
-      
+
+            <div class='online'>
+            
+                <h1> Welcome <?php echo $_SESSION['username']; ?> </h1>
+                
+                <form action='/picture' method='POST' enctype='multipart/form-data'>
+                    
+                    <label>description:</label><textarea rows='5' cols='35' name='desc'></textarea>
+                    
+                    <label>Image:</label><input type='file' name='img'>
+                    
+                    <input type="submit" value="Submit">
+        
+                </form>
+
+            </div>
+        
         <?php endif; ?>
 
         <div class='imageContainer'>
@@ -69,12 +73,12 @@
                         <h3><?php echo $image->user; ?></h3>
                         <p>"<?php echo $image->description; ?>"</p>
                         <?php if(isset($_SESSION['username']) && $_SESSION['username'] == $image->user) : ?> 
-                            <form action='/delete' method='POST'>
+                            <form class='postDelete' action='/delete' method='POST'>
                                 <input type='hidden' name='deletePost' value='<?php echo $image->id; ?>'>
                                 <input type='hidden' name='image' value='uploadedFiles/<?php echo $image->image ?>'>
                                 <input type="submit" value="Delete">
                             </form>
-                            <form action='/update' method='POST'>
+                            <form class='postEdit' action='/update' method='POST'>
                                 <input type='hidden' name='updateId' value='<?php echo $image->id; ?>'>
                                 <input type='text' name='newDesc'>
                                 <input type="submit" value="Edit">
